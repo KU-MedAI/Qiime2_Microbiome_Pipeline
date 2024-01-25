@@ -66,7 +66,7 @@ Import data and then upload the visualized `.qzv` file to [Qiime2 View](https://
 `cutadapt/cut_seq_vis.qzv`
 
 In our pipeline, the `.qza` files within the `import_data` directory are used by default (Since the downloaded data may have already had adapters removed or undergone Quality Control (QC)).
-If you have performed QC yourself, please change the path of the `--i-demultiplexed_seqs` parameter in `qiime2_dada2.sh` or `qiime2_deblur.sh` within the `scripts` directory to `${RESULT_DIR}/cutadapt/cut_seq.qza`.
+If you have performed QC yourself, please change the path of the `--i-demultiplexed_seqs` parameter in `02_qiime2_dada2.sh` or `03_qiime2_deblur.sh` within the `scripts` directory to `${RESULT_DIR}/cutadapt/cut_seq.qza`.
 
 
 2. Run the second file:
