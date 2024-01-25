@@ -1,6 +1,3 @@
-<<<<<<< Updated upstream
-# Qiime2_Microbiome_Pipeline
-=======
 # Qiime2_Microbiome_Analysis_Simple_Pipeline
 
 ## Environment
@@ -38,12 +35,15 @@ sampleid | label
 ---------|---------
 "*" of *_L001_R1_001.fastq.gz | gut
 
-- Error: Duplicate Sample IDs error
+
+- *Error: Duplicate Sample IDs error*
 
 If you have the error, change `sampleid` column in `metadata.txt`. For example, If you have samples named "A1_01", "A1_02", "A1_03", then in your `metadata.txt`, the `sampleid` column should contain values "A101_01", "A102_02", "A103_03". It's important to ensure that the part of the string before the underscore in these sampleid is unique. Here's a breakdown of how the transformation works:
 
 "A1_01" → "A101_01"
+
 "A1_02" → "A102_02"
+
 "A1_03" → "A103_03"
 
 ## Pipeline
@@ -73,7 +73,7 @@ In many studies, `dada2` is commonly used for trimming, which is why our pipelin
 
 3. If this error continues to occur (even after changing the `trunc_len_f` or `_r` parameters), please execute the following file: `03_deblur_pipeline.sh`. Since *deblur* does not trim based on quality score (q score), it is expected to perform correctly.
 
-- Error: No reads passed the filter. trunc_len_f (n) or trunc_len_r (n) may be individually longer than read lengths, or trunc_len_f + trunc_len_r may be shorter than the length of the amplicon + 12 nucleotides (the length of the overlap). Alternatively, other arguments (such as max_ee or trunc_q) may be preventing reads from passing the filter.
+- *Error: No reads passed the filter. trunc_len_f (n) or trunc_len_r (n) may be individually longer than read lengths, or trunc_len_f + trunc_len_r may be shorter than the length of the amplicon + 12 nucleotides (the length of the overlap). Alternatively, other arguments (such as max_ee or trunc_q) may be preventing reads from passing the filter.*
  
 ```
 ./03_deblur_pipeline.sh
@@ -90,4 +90,3 @@ If the pipeline has been executed successfully, a `barplot.qzv` file should have
 
 **If the taxonomy is not as rich as expected:**
 - The threshold (e.g. quality score, trunc_len, etc) set in `02_dada2_pipeline.sh` or `03_deblur_pipeline.sh` might be too high. Try lowering the threshold to the minimum and rerun the pipeline.
->>>>>>> Stashed changes
