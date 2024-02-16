@@ -3,7 +3,7 @@
 set -euo pipefail
 
 NAME=Results
-RAWDATA='absolute-path/rawdata'
+RAWDATA='/home/songhyeon/Research/Atopic/Qiime2_Microbiome_Pipeline/rawdata'
 
 microbiome_analysis_data_main(){
    create_dir
@@ -27,7 +27,7 @@ set_path(){
 
 import_data(){
 
-   . ./scripts/import_data.sh
+   . ./scripts/01_import_data.sh
 
    cd -
 
@@ -36,7 +36,7 @@ import_data(){
 
 qiime2_cutadapt(){
 
-   . ./scripts/qiime2_cutadapt.sh
+   . ./scripts/01_qiime2_cutadapt.sh
 
    cd - 
 

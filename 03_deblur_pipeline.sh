@@ -20,7 +20,7 @@ set_path(){
 
 qiime2_deblur(){
 
-    . ./scripts/qiime2_deblur.sh
+    . ./scripts/03_qiime2_deblur.sh
 
     cd -
 
@@ -29,7 +29,7 @@ qiime2_deblur(){
 qiime2_classification(){
     TARGET_DIR=$1
     export TARGET_DIR
-    . ./scripts/qiime2_classification.sh
+    . ./scripts/023_qiime2_classification.sh
     
     cd -
 
@@ -38,7 +38,7 @@ qiime2_classification(){
 qiime2_barplot(){
     TARGET_DIR=$1
     export TARGET_DIR
-   . ./scripts/qiime2_barplot.sh
+   . ./scripts/023_qiime2_barplot.sh
 
    cd -
 
