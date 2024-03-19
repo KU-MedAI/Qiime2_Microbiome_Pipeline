@@ -3,7 +3,7 @@
 set -euo pipefail
 
 NAME=Results
-RAWDATA='/home/songhyeon/Research/Atopic/Qiime2_Microbiome_Pipeline/rawdata'
+RAWDATA='Absolute_Path/rawdata'
 
 microbiome_analysis_data_main(){
    create_dir
